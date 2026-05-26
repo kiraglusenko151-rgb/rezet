@@ -1,0 +1,417 @@
+/* -------------------------------------------
+   STYLE.CSS - СПІЛЬНІ СТИЛІ ДЛЯ ВСЬОГО САЙТУ
+   Lavender Kitchen | Рецепти
+   Пастельна фіолетова гамма
+------------------------------------------- */
+
+/* ===== Базові скидання ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(135deg, #f5eff9 0%, #e8ddf2 100%);
+    min-height: 100vh;
+    color: #3a2452;
+    line-height: 1.5;
+}
+
+/* ===== Контейнер ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* ===== Хедер (головна сторінка) ===== */
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.logo {
+    font-size: 2.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #8b6cb0, #c49ee0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    color: #6b4c8a;
+    letter-spacing: 2px;
+}
+
+/* ===== Навігаційні картки (головна сторінка) ===== */
+.sections-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.section-card {
+    background: white;
+    border-radius: 2rem;
+    padding: 2rem;
+    width: 320px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid #e4d4f0;
+    box-shadow: 0 8px 20px rgba(106, 62, 143, 0.08);
+    text-align: center;
+}
+
+.section-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(106, 62, 143, 0.15);
+    border-color: #c9b2e0;
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.card-number {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.25rem 0.8rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+}
+
+.card-number-1 { background: #ede3f8; color: #6b3e8a; }
+.card-number-2 { background: #e8ddf3; color: #7a4d9e; }
+.card-number-3 { background: #e5d6f0; color: #8a5aaa; }
+
+.section-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #3a2452;
+}
+
+.section-card p {
+    color: #6a5287;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.card-arrow {
+    font-size: 0.9rem;
+    color: #8b6cb0;
+    font-weight: 500;
+}
+
+/* ===== Футер ===== */
+.footer {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #decdf0;
+    color: #7a5a9e;
+    font-size: 0.85rem;
+}
+
+/* ===== СПІЛЬНІ СТИЛІ ДЛЯ ВСІХ РОЗДІЛІВ ===== */
+.back-link {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: #7a5a9e;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: #4a2c6e;
+}
+
+/* Основний блок розділу */
+.section {
+    background: #ffffff;
+    border-radius: 2rem;
+    border: 1px solid #e2cfef;
+    box-shadow: 0 12px 28px rgba(106, 62, 143, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.section:hover {
+    box-shadow: 0 20px 35px rgba(106, 62, 143, 0.12);
+    border-color: #d1bae8;
+}
+
+.section__inner {
+    padding: 2.5rem 2.2rem;
+}
+
+/* Номери розділів з різними відтінками */
+.section__number {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0.25rem 0.9rem;
+    border-radius: 2rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #decdf0;
+}
+
+.section__number-1 {
+    background: #ede3f8;
+    color: #6b3e8a;
+}
+
+.section__number-2 {
+    background: #e8ddf3;
+    color: #7a4d9e;
+}
+
+.section__number-3 {
+    background: #e5d6f0;
+    color: #8a5aaa;
+}
+
+/* Заголовки */
+.section__title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #4a2868;
+}
+
+.section__title span {
+    background: linear-gradient(135deg, #8b6cb0, #b492d6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.section__desc {
+    font-size: 1.05rem;
+    color: #5a4578;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 90%;
+}
+
+/* Інформаційний блок */
+.info-block {
+    background: #f8f2ff;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    border: 1px solid #e4d4f0;
+}
+
+.info-block p {
+    color: #6b4c8a;
+    font-size: 0.9rem;
+}
+
+/* Цитата */
+.quote-block {
+    background: #f8f2ff;
+    padding: 1.2rem 1.5rem;
+    border-radius: 1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+    font-style: italic;
+    border-left: 4px solid #b492d6;
+    color: #5a4578;
+}
+
+/* Блок поради */
+.tip-block {
+    background: linear-gradient(135deg, #f5eff9, #ede3f8);
+    padding: 1.2rem 1.5rem;
+    border-radius: 1rem;
+    margin: 1.5rem 0;
+    border: 1px solid #decdf0;
+}
+
+.tip-block h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #4a2868;
+}
+
+.tip-block p {
+    color: #6a5287;
+    font-size: 0.95rem;
+}
+
+/* Навігація між розділами */
+.section__nav {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    padding: 0.7rem 1.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s;
+    background: #ede3f8;
+    color: #5a2d82;
+    border: 1px solid #decdf0;
+}
+
+.nav-btn--next {
+    background: #dac7ee;
+    color: #4a2c6e;
+}
+
+.nav-btn:hover {
+    transform: translateY(-2px);
+    background: #e2d0f2;
+}
+
+/* ===== СТИЛІ ДЛЯ КАРТОК РЕЦЕПТІВ (всі розділи) ===== */
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.recipe-card {
+    background: #faf5ff;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid #e8dbf5;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-card:hover {
+    transform: translateY(-4px);
+    border-color: #d1bae8;
+    box-shadow: 0 8px 20px rgba(106, 62, 143, 0.1);
+}
+
+.recipe-image {
+    background: linear-gradient(135deg, #e8ddf2, #dac7ee);
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: #8b6cb0;
+}
+
+.recipe-info {
+    padding: 1.2rem;
+}
+
+.recipe-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #4a2868;
+}
+
+.recipe-info p {
+    color: #6a5287;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.recipe-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    color: #8b6cb0;
+}
+
+.recipe-meta span {
+    background: #ede3f8;
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+}
+
+.recipe-btn {
+    background: white;
+    border: 1px solid #d1bae8;
+    padding: 0.6rem 1rem;
+    border-radius: 2rem;
+    color: #6b3e8a;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+    font-family: inherit;
+}
+
+.recipe-btn:hover {
+    background: #ede3f8;
+    transform: translateY(-1px);
+}
+
+/* ===== АДАПТИВНІСТЬ ===== */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem 1rem;
+    }
+    
+    .logo {
+        font-size: 2rem;
+    }
+    
+    .section-card {
+        width: 100%;
+    }
+    
+    .section__inner {
+        padding: 1.5rem;
+    }
+    
+    .section__title {
+        font-size: 1.6rem;
+    }
+    
+    .section__desc {
+        max-width: 100%;
+    }
+    
+    .recipes-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/* ===== Анімації ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-card {
+    animation: fadeInUp 0.5s ease backwards;
+}
+
+.section-card:nth-child(1) { animation-delay: 0.05s; }
+.section-card:nth-child(2) { animation-delay: 0.1s; }
+.section-card:nth-child(3) { animation-delay: 0.15s; }
